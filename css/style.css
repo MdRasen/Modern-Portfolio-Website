@@ -23,6 +23,14 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+body.dark {
+    --bg-black-900: #151515;
+    --bg-black-100: #222222;
+    --bg-black-50: #393939;
+    --text-black-900: #ffffff;
+    --text-black-700: #e9e9e9;
+}
+
 ::before,
 ::after {
     box-sizing: border-box;
@@ -414,7 +422,8 @@ h3.my-profession {
     line-height: 40px;
     font-weight: 600;
     font-size: 16px;
-    text-transform: capitalize
+    text-transform: capitalize;
+    color: var(--text-black-900);
 }
 
 .about .about-content .skills .skills-item .progress {
@@ -661,7 +670,7 @@ h3.my-profession {
     color: var(--skin-color);
 }
 
-.contact .contact-info-item .icon h4 {
+.contact .contact-info-item h4 {
     font-size: 18px;
     font-weight: 700;
     color: var(--text-black-900);
@@ -669,7 +678,7 @@ h3.my-profession {
     margin: 15px 0 5px;
 }
 
-.contact .contact-info-item .icon p {
+.contact .contact-info-item p {
     font-size: 16px;
     line-height: 25px;
     color: var(--text-black-700);
@@ -775,6 +784,10 @@ h3.my-profession {
     .about .about-content .personal-info {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+
+    .btn {
+        padding: 10px 20px;
     }
 }
 
