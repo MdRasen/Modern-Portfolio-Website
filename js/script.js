@@ -37,7 +37,7 @@ for (let i = 0; i < totalNavList; i++) {
     this.classList.add("active");
     showSection(this); //Function call
     //Nav click event - Hiding the nav menu
-    if(window.innerWidth < 1200){
+    if (window.innerWidth < 1200) {
       asideSectionTogglerBtn();
     }
   });
@@ -49,6 +49,25 @@ function showSection(element) {
   }
   const target = element.getAttribute("href").split("#")[1];
   document.querySelector("#" + target).classList.add("active");
+}
+
+//For Hire me section
+document.querySelector(".hire-me").addEventListener("click", function () {
+  showSection(this);
+  updateNav(this);
+});
+
+function updateNav(element) {
+  for (let i = 0; i < totalNavList; i++) {
+    navList[i].querySelector("a").classList.remove("active");
+    const target = element.getAttribute("href").split("#")[1];
+    if (
+      target ===
+      navList[i].querySelector("a").getAttribute("href").split("#")[1]
+    ) {
+      navList[i].querySelector("a").classList.add("active");
+    }
+  }
 }
 
 //For Nav Toggler Button
