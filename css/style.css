@@ -53,6 +53,7 @@ ul {
     bottom: 0;
     overflow-x: hidden;
     overflow-y: auto;
+    transition: all 0.3s ease;
 }
 
 .section.back-section {
@@ -174,6 +175,7 @@ ul {
     justify-content: center;
     align-items: center;
     border-right: 1px solid var(--bg-black-50);
+    transition: all 0.3s ease;
 }
 
 .aside .logo {
@@ -232,6 +234,7 @@ ul {
     display: none;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
 .aside .nav-toggler span {
@@ -240,6 +243,10 @@ ul {
     background: var(--skin-color);
     display: inline-block;
     position: relative;
+}
+
+.aside .nav-toggler.open span {
+    background-color: transparent;
 }
 
 .aside .nav-toggler span::before {
@@ -252,6 +259,11 @@ ul {
     left: 0;
 }
 
+.aside .nav-toggler.open span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
 .aside .nav-toggler span::after {
     content: '';
     height: 2px;
@@ -260,6 +272,11 @@ ul {
     position: absolute;
     top: 6px;
     left: 0;
+}
+
+.aside .nav-toggler.open span::after {
+    transform: rotate(-45deg);
+    top: 0;
 }
 
 .aside .nav {
@@ -766,8 +783,21 @@ h3.my-profession {
         left: -270px;
     }
 
-    .main-content {
-        padding-left: 0;
+    .aside.open {
+        left: 0;
+    }
+
+    .aside .nav-toggler {
+        display: flex;
+        left: 30px;
+    }
+
+    .aside .nav-toggler.open {
+        left: 300px;
+    }
+
+    .section {
+        left: 0;
     }
 
     .about .about-content .personal-info .info-item p span {
