@@ -4,8 +4,14 @@ styleSwitcherToggle.addEventListener("click", () => {
   document.querySelector(".style-switcher").classList.toggle("open");
 });
 
-//Hide style-switcher on scroll
+// Hide style-switcher
 window.addEventListener("mousewheel", () => {
+  if (document.querySelector(".style-switcher").classList.contains("open")) {
+    document.querySelector(".style-switcher").classList.remove("open");
+  }
+});
+
+window.addEventListener("touchmove", () => {
   if (document.querySelector(".style-switcher").classList.contains("open")) {
     document.querySelector(".style-switcher").classList.remove("open");
   }
