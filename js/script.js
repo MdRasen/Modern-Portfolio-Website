@@ -1,3 +1,13 @@
+/* 
+    Project Name: Modern Portfolio Website
+    Description: A complete responsive modern portfolio website design
+                 by using HTML CSS and Vanilla JavaScript from scratch.
+    Author: Md Al Amin Hossen
+    Github: https://github.com/MdRasen
+    License: MIT License
+    Copyright: 2023 ©MdRasen 
+*/
+
 // Typing animation
 var typed = new Typed(".typing", {
   strings: [
