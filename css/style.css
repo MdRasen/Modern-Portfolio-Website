@@ -689,6 +689,89 @@ h3.my-profession {
 
 /* Portfolio End */
 
+/* Blog Start */
+.blog .container {
+  padding-bottom: 40px;
+}
+
+.blog .blog-heading {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+.blog .blog-heading h2 {
+  color: var(--text-black-900);
+  font-weight: 500;
+}
+
+.blog .blog-item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  margin-bottom: 30px;
+}
+
+.blog .blog-item .blog-item-inner {
+  background-color: var(--bg-black-100);
+  border: 1px solid var(--bg-black-50);
+  border-radius: 10px;
+  padding: 30px 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.blog .blog-item .blog-item-inner:hover {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.blog .blog-item .blog-item-inner .image img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 20px;
+  transition: all 0.3s ease;
+}
+
+.blog .blog-item .blog-item-inner:hover img {
+  transform: scale(1.05);
+  border-radius: 10px;
+}
+
+.blog .blog-item .blog-item-inner .blog-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.blog .blog-item .blog-item-inner .blog-info p i {
+  color: var(--skin-color);
+  padding-right: 2px;
+}
+
+.blog .blog-item .blog-item-inner h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: var(--text-black-900);
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.blog .blog-item .blog-item-inner p {
+  font-size: 16px;
+  color: var(--text-black-700);
+  line-height: 25px;
+}
+
+.blog .blog-item .blog-item-inner a {
+  font-size: 16px;
+  color: var(--skin-color);
+  line-height: 25px;
+}
+
+/* Blog End */
+
 /* Contact Start */
 .contact-title {
   color: var(--skin-color);
@@ -818,6 +901,7 @@ h3.my-profession {
 @media (max-width: 990px) {
 
   .contact .contact-info-item,
+  .blog .blog-item,
   .portfolio .portfolio-item,
   .service .service-item {
     flex: 0 0 50%;
@@ -838,6 +922,7 @@ h3.my-profession {
 
   .contact .contact-form .col-6,
   .contact .contact-info-item,
+  .blog .blog-item,
   .portfolio .portfolio-item,
   .service .service-item,
   .about .about-content .education,
