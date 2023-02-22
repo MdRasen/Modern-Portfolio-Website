@@ -1,0 +1,261 @@
+/* 
+Project Name: Modern Portfolio Website
+Description: A complete responsive modern portfolio website design
+             by using HTML CSS and Vanilla JavaScript from scratch.
+Author: Md Al Amin Hossen
+Github: https://github.com/MdRasen
+License: MIT License
+Copyright: 2023 ©MdRasen 
+*/
+
+/* .Global CSS Start */
+.blog-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding-top: 15px;
+}
+
+/* .Global CSS End */
+
+.blog-container {
+    width: 100%;
+    color: var(--text-black-900);
+}
+
+/* Top Section Start */
+
+.top-section {
+    background: var(--bg-black-50);
+    padding: 20px 6% 40px;
+}
+
+.top-section .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.top-row.logo {
+    position: absolute;
+    top: 50px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.top-row .logo a {
+    color: var(--text-black-700);
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    position: relative;
+}
+
+.top-row .logo a span {
+    font-family: "Clicker Script", cursive;
+    font-size: 40px;
+}
+
+.top-row .logo a::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid var(--skin-color);
+    border-left: 5px solid var(--skin-color);
+    bottom: 0;
+    left: 0;
+}
+
+.top-row .logo a::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--skin-color);
+    border-right: 5px solid var(--skin-color);
+    top: 0;
+    right: 0;
+}
+
+.bottom-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.category a {
+    color: var(--skin-color);
+}
+
+/* Top Section End */
+
+/* Body Section Start */
+.body-section {
+    padding: 20px 6%;
+    background: var(--bg-black-100);
+}
+
+.body-section .body-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.body-section .body-row .left {
+    flex-basis: 60%;
+    width: 60%;
+}
+
+.body-section .body-row .right {
+    flex-basis: 40%;
+    width: 40%;
+}
+
+.body-row .left .blog-img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.body-row .left .blog-title {
+    padding: 10px 0;
+}
+
+.body-row .left .blog-desc {
+    padding: 10px 0;
+    line-height: 1.5;
+    word-spacing: 1.1px;
+    text-align: justify;
+}
+
+.body-row .left .social-share {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 15px;
+    border-left: 2px solid var(--skin-color);
+}
+
+.body-row .left .social-share .social-icons a {
+    color: var(--text-black-900);
+    padding: 0 3px;
+}
+
+.body-row .left .social-share .social-icons a i {
+    color: var(--text-black-900);
+    font-size: 22px;
+}
+
+.body-row .left .social-share .social-icons a:hover i {
+    color: var(--skin-color);
+}
+
+.body-row .right .section-title h2 {
+    font-size: 35px;
+}
+
+.body-row .right .recent-posts {
+    margin-top: -10px;
+}
+
+.body-row .right .recent-posts a {
+    color: var(--text-black-900);
+}
+
+.body-row .right .recent-posts a:hover {
+    color: var(--skin-color);
+}
+
+.body-row .right .recent-posts .post-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 0;
+    margin: 5px;
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.recent-posts .post-row .post-img {
+    flex-basis: 30%;
+    width: 30%;
+}
+
+.recent-posts .post-row .post-img img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+}
+
+.recent-posts .post-row .post-desc p {
+    padding: 5px 0;
+}
+
+/* Body Section End */
+
+/* Footer Section Start */
+.footer-section {
+    background: var(--bg-black-50);
+    color: var(--text-black-700);
+    font-size: 16px;
+}
+
+.footer-section .footer-row {
+    padding: 10px 6%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-section .footer-row a {
+    color: var(--skin-color);
+}
+
+/* Footer Section End */
+
+/* Device Responsive Start */
+@media (max-width: 760px) {
+    .body-section .body-row {
+        flex-direction: column;
+    }
+
+    .body-section .body-row .left,
+    .body-section .body-row .right {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .body-row .right .recent-posts .post-row {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 580px) {
+    .body-row .left .social-share .social-icons {
+        padding-left: 15px;
+        padding-top: 20px;
+    }
+
+    .footer-section .footer-row {
+        flex-direction: column;
+    }
+
+    .footer-section .footer-row div {
+        flex-basis: 100%;
+        width: 100%;
+    }
+}
+
+/* Device Responsive End */
