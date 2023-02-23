@@ -8,28 +8,18 @@ License: MIT License
 Copyright: 2023 ©MdRasen 
 */
 
-/* .Global CSS Start */
-.blog-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-    padding-top: 15px;
-}
-
-/* .Global CSS End */
+/* Container Start */
 
 .blog-container {
     width: 100%;
     color: var(--text-black-900);
 }
 
+/* Container End */
 /* Top Section Start */
 
 .top-section {
-    background: var(--bg-black-50);
+    background: var(--bg-black-100);
     padding: 20px 6% 40px;
 }
 
@@ -101,7 +91,7 @@ Copyright: 2023 ©MdRasen
 /* Body Section Start */
 .body-section {
     padding: 20px 6%;
-    background: var(--bg-black-100);
+    background: var(--bg-black-900);
 }
 
 .body-section .body-row {
@@ -114,6 +104,16 @@ Copyright: 2023 ©MdRasen
 .body-section .body-row .left {
     flex-basis: 60%;
     width: 60%;
+}
+
+.body-section .body-row .left .blog-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding-top: 15px;
 }
 
 .body-section .body-row .right {
@@ -205,7 +205,7 @@ Copyright: 2023 ©MdRasen
 
 /* Footer Section Start */
 .footer-section {
-    background: var(--bg-black-50);
+    background: var(--bg-black-100);
     color: var(--text-black-700);
     font-size: 16px;
 }
